@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BODIES — Madero & Massage · Ungasan, Bali</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --sand: #EDE3D2;
+    --paper: #FBF6EC;
+    --clay: #C1592C;
+    --clay-dark: #99461F;
+    --ink: #2A231C;
+    --ink-soft: #55493C;
+    --moss: #56624A;
+    --wood: #7C5C3E;
+    --line: rgba(42,35,28,0.14);
+    --radius: 999px;
+  }
+  
+  *{ 
+    box-sizing: border-box; 
+  }
+
+  html{ 
+    scroll-behavior: smooth;
+  }
+  body{
+    margin:0;
+    background: var(--sand);
+    color: var(--ink);
+    font-family: 'Karla', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x:hidden;
+  }
+
+  h1,h2,h3,.serif{ 
+    font-family: serif;
+    font-weight: 500; 
+    margin: 0; 
+  }
+  p{ 
+    margin: 0; 
+    line-height: 1.6; 
+  }
+  a{ 
+    color: inherit; 
+    text-decoration: none; 
+  }
+  button{ 
+    font-family: inherit; 
+    cursor: pointer;
+  }
+  ::selection{ 
+    background: var(--clay); 
+    color: var(--paper); 
+  }
+
+  .wrap{ 
+    max-width: 1080px; 
+    margin: 0 auto; 
+    padding: 0 28px; 
+  }
+
+  /* ---------- Nav ---------- */
+  header{
+    position: sticky; 
+    top:0; 
+    z-index: 200;
+
+    background: rgba(237,227,210,0.92);
+
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+    -webkit-backdrop-filter:blur(8px);
+
+  border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content: space-between;
+    padding: 18px 28px;
+    max-width: 1080px; 
+    margin: 0 auto;
+    gap: 20px;
+  }
+  .logo{
+    display:block; 
+    position:relative;
+    z-index: 220;
+  }
+
+  .logo span{ font-style: normal; color: var(--clay); }
+
+  .logo-img { 
+    height: 45px!important; 
+    width: auto!important; 
+    display:block; 
+   }
+   
+  @media (max-width:980px){
+
+  header{
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
+  }
+
+  .nav{
+    padding:14px 20px;
+  }
+
+  .logo-img{
+    height:40px !important;
+  }
+
+}
+
+@media (max-width: 600px){
+
+  .nav{
+    padding: 12px 16px;
+  }
+
+  .logo-img{
+    height: 34px !important;
+  }
+
+  .burger{
+      width:40px;
+      height:40px;
+
+      font-size:1.3rem;
+  }
+  nav.links{
+  padding: 80px 20px
+  calc(28px + env(safe-area-inset-bottom));
+  gap: 32px;
+  }  
+  .menu-links a{
+    font-size:2rem;
+    padding:16px 0;
+  }
+}
+@media (max-width:350px){
+
+  .nav{
+    padding:10px 12px;
+  }
+
+  .logo-img{
+    height:30px !important;
+  }
+
+  .burger{
+    width:36px;
+    height:36px;
+
+    font-size:1.2rem;
+  }
+
+  .menu-links,
+  .menu-language-dropdown{
+    width:86vw;
+  }
+
+  .menu-links a{
+    font-size:1.75rem;
+  }
+
+}
+
+/* ========================= BURGER ========================= */
+
+  .burger{
+    Position: relative;
+    z-index: 220;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 44px;
+    height: 44px;
+
+    font-size: 1.45rem;
+    line-height: 1;
+    cursor: pointer;
+    
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--ink);
+  }
+
+  .wrap{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .page-head{
+    padding: 50px 0 28px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .page-head h2{
+    font-family: 'Fraunces',serif;
+    font-size:clamp(2.6rem, 4vw, 3.4rem);
+    font-weight:500;
+    line-height:1;
+  }
+   
+  .float-wa{
+    right:16px;
+    bottom:18px;
+    width:48px;
+    height:48px;
+  }
+
+
+@media (max-width:350px){
+
+  .nav{
+    padding:10px 12px;
+  }
+
+  .logo-img{
+    height:30px !important;
+  }
+  .burger{
+    font-size:1.2rem;
+    padding:3px;
+  }
+}
+/* =========================
+   FULLSCREEN MENU
+========================= */
+
+  nav.links{
+  position:fixed;
+  inset:0;
+
+  width:100vw;
+  height:100dvh;
+
+  z-index:210;
+
+  background:var(--sand);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  gap:44px;
+
+  padding:90px 24px 50px;
+
+  opacity:0;
+  visibility:hidden;
+
+  transform:translateY(-8px);
+
+  transition:
+    opacity .28s ease,
+    transform .28s ease,
+    visibility .28s ease;
+  }
+
+  nav.links.open{
+    opacity:1;
+    visibility:visible;
+    transform:translateX(0);
+  }
+
+  /* ---------- Page sections ---------- */
+  section.page{ 
+    display:none;
+  }
+
+  section.page.active{ 
+    display:block;
+}
+
+  /* ---------- HOME FULLSCREEN ---------- */
+
+#home{
+  width:100%;
+}
+.home-media{
+  position:absolute;
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+  object-position:center;
+
+  z-index:0;
+}
+.home-visual{
+  position:relative;
+  width:100%;
+  height:calc(100dvh - 82px);
+  min-height:520px;
+  overflow:hidden;
+
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+
+  padding:0 28px 54px;
+}
+
+.home-media{
+  position:absolute;
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  z-index:0;
+}
+
+.home-overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(20,16,12,.38) 0%,
+      rgba(20,16,12,.08) 45%,
+      rgba(20,16,12,.03) 100%
+    );
+
+  z-index:1;
+}
+
+.home-hover-title{
+  position:absolute;
+  inset:0;
+
+  z-index:2;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:24px;
+
+  text-align:center;
+
+  font-family:'serif';
+  font-size:clamp(1.8rem, 4vw, 3.5rem);
+
+  color:var(--paper);
+  opacity:0;
+  transform:translateY(8px);
+
+  transition:
+    opacity .35s ease,
+    transform .35s ease;
+
+  pointer-events:none;
+}
+
+
+.home-overlay{
+  transition:background .35s ease;
+}
+
+.home-overlay{
+  position:absolute;
+  inset:0;
+
+  z-index:1;
+
+  background:rgba(20,16,12,.20);
+  pointer-events:none;
+}
+
+.home-logo-overlay{
+  position:absolute;
+  inset:0;
+  z-index:2;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  pointer-events:none;
+}
+
+.home-logo-overlay img{
+  width:min(360px, 55vw);
+  height:auto;
+  display:block;
+}
+
+@keyframes overlayBreath{
+
+  0%, 100%{
+    background:rgba(20,16,12,.18);
+  }
+
+  50%{
+    background:rgba(20,16,12,.27);
+  }
+}
+
+.home-hover-title{
+  position:absolute;
+  inset:0;
+
+  z-index:2;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:24px;
+
+  text-align:center;
+
+  font-family:'serif';
+  font-size:clamp(1.8rem, 4vw, 3.5rem);
+  font-weight:500;
+
+  color:var(--paper);
+
+  opacity:1;
+  transform:none;
+
+  animation:none !important;
+  transition:none !important;
+
+  text-shadow:none;
+
+  pointer-events:none;
+}
+
+@keyframes homeTitleFloat{
+
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-4px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+50%{
+  transform:translateY(-2px);
+}
+}
+
+@keyframes homeTitleFloat{
+
+  0%{
+    transform:translateY(0);
+    opacity:.92;
+  }
+
+  50%{
+    transform:translateY(-6px);
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(0);
+    opacity:.92;
+  }
+
+}
+.home-visual:hover .home-overlay{
+  background:rgba(20,16,12,.42);
+}
+
+.home-actions{
+  position:relative;
+  z-index:2;
+
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.home-btn{
+  min-height:50px;
+
+  padding:0 26px;
+
+  border-radius:999px;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:.95rem;
+  font-weight:500;
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    border-color .2s ease;
+}
+
+.home-btn:hover{
+  transform:translateY(-2px);
+}
+
+.home-btn-primary{
+  background:var(--clay);
+  color:var(--paper);
+  border:1px solid var(--clay);
+}
+
+.home-btn-primary:hover{
+  background:var(--clay-dark);
+  border-color:var(--clay-dark);
+}
+
+.home-btn-secondary{
+  background:rgba(251,246,236,.82);
+  color:var(--ink);
+
+  border:1px solid rgba(251,246,236,.75);
+
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+.home-btn-secondary:hover{
+  background:var(--paper);
+}
+
+@media (max-width:600px){
+
+  .home-visual{
+    height:calc(100dvh - 59px);
+
+    padding:
+      0 16px
+      calc(24px + env(safe-area-inset-bottom));
+  }
+
+  .home-actions{
+    width:100%;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .home-btn{
+    width:100%;
+    min-height:50px;
+  }
+
+}
+  /* ---- Generic page header ---- */
+  .page-head{ 
+    min-height:120px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0;
+    text-align:center;
+    border-bottom:1px solid var(--line);; 
+  }
+  .page-head h2{ 
+    font-family:'Fraunces', serif;
+    font-size:clamp(2.6rem, 4vw, 3.4rem);
+    font-weight:500;
+    line-height:1;
+    margin:0; 
+  }
+  .page-head p{ 
+    margin-top: 14px; 
+    max-width: 56ch; 
+    color: var(--ink-soft); 
+  }
+
+  /* ---- Services ---- */
+  .service-list{ 
+    padding: 8px 0 80px; 
+  }
+  
+  .service{
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .page-head h2{
+    text-align:center;
+    font-family:'Fraunces', serif;
+    font-size:clamp(2.6rem, 4vw, 3.4rem);
+    font-weight:500;
+    line-height:1;
+}
+  .service:first-child{ 
+    padding-top: 36px; 
+  }
+  
+  .service h3{ 
+    font-family:'Fraunces', serif;
+    font-size:1.35rem;
+    font-weight:500;
+    margin-bottom:10px;
+  }
+
+  .service p{ 
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    max-width: 100%;
+    line-height:1.7;
+  }
+
+  .service-options{ 
+    display:flex; 
+    gap: 12px; 
+    flex-wrap: wrap; 
+    margin-top: 18px;
+  }
+
+  .option-link{
+    border: 1px solid var(--wood); 
+    padding: 8px 16px; 
+    border-radius: var(--radius);
+    font-size: 0.88rem;
+    color: var(--ink);
+    transition: border-color .2s, color .2s;
+  }
+  .option-link:hover{ 
+    border-color: var(--clay);
+    color: var(--clay); 
+  }
+  .service-category{ 
+    margin-bottom: 0;
+  }
+  .category-label{
+    font-family:'Fraunces',serif; 
+    font-style: italic;
+    font-weight: 500; 
+    font-size: clamp(2rem, 3vw, 2.7rem);
+    color: var(--clay);
+    text-align:center;
+    padding: 28px 0 22px; 
+    margin-top:0;
+}
+.service-category:first-child .category-label{ 
+  border-top:none;
+  margin-top:0;
+  padding-top:0; 
+}
+.option-note{ 
+  font-size: 0.75rem; 
+  opacity: 0.75;
+  margin-left: 4px; 
+}
+.service-note{ 
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-top: 8px;
+  max-width: 800px; 
+}
+
+.addon-block{ 
+  padding: 44px 0 70px; 
+  border-top: 1px solid var(--line); 
+  text-align: center; 
+}
+.addon-block h3{ 
+  font-size: 1.3rem; 
+  margin-bottom: 8px;
+}
+.addon-block > p{ 
+  color: var(--ink-soft); 
+  font-size: 0.9rem; 
+  margin-bottom: 22px;
+}
+.addon-list{
+  list-style:none;
+  padding:0;
+  margin: 0 0 18px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap: 10px 30px;
+}
+.addon-list li{ 
+  font-size: 0.95rem;
+  color: var(--ink); 
+}
+.addon-list li span:last-child{ 
+  color: var(--clay); 
+  margin-left: 6px; 
+}
+.addon-note{
+  font-size: 0.78rem;
+  color: var(--ink-soft); 
+  font-style: italic; }
+  
+
+  /* ---- About ---- */
+  .about-grid{
+    padding: 8px 0 80px; 
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+  }
+  .about-grid p{ 
+    color: var(--ink-soft);
+    margin-bottom: 18px; 
+  }
+  .about-grid h3{ 
+    font-size: 1.1rem; 
+    color: var(--ink); 
+    margin-bottom: 12px; 
+  }
+  .values{ 
+    list-style:none; 
+    padding:0; 
+    margin:0; 
+  }
+  .values li{ 
+    padding: 14px 0; 
+    border-top: 1px solid var(--line); 
+    color: var(--ink-soft); 
+    font-size:0.95rem;
+  }
+  .values li:first-child{ 
+    border-top:none; 
+  }
+  .values b{ 
+    color: var(--ink); 
+    font-weight:600;
+  }
+  
+  @media (max-width: 760px){ 
+    .about-grid{
+      grid-template-columns: 1fr; 
+      gap: 20px; } }
+
+  /* ---- Contact ---- */
+  .contact-grid{
+    padding: 8px 0 80px; 
+    display:grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 56px;
+  }
+  .contact-block{ 
+    margin-bottom: 30px; 
+  }
+  .contact-block h3{ 
+    font-size: 0.95rem;
+    color: var(--moss);
+    margin-bottom: 10px;
+  }
+  .contact-block p, .contact-block a{
+     font-size: 1.05rem; 
+  }
+  .contact-block a.link{ 
+    border-bottom: 1px solid var(--clay);
+    color: var(--clay); 
+  }
+  .hours-row{
+    display:flex;
+    justify-content:space-between;
+    padding: 8px 0; 
+    border-top: 1px solid var(--line); 
+    font-size: 0.95rem;
+    color: var(--ink-soft); 
+  }
+  .hours-row:first-of-type{ 
+    border-top:none;
+  }
+  .contact-actions{ 
+    display:flex;
+    flex-direction:column;
+    gap: 14px;
+    margin-top: 26px;
+  }
+
+  @media (max-width: 760px){ .contact-grid{
+    grid-template-columns: 1fr;
+    gap: 10px; } }
+
+  /* ---- Footer ---- */
+  footer{ 
+    border-top: 1px solid var(--line); 
+    padding: 28px 0 40px;
+  }
+  footer .wrap{ 
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center; 
+    flex-wrap:wrap; 
+    gap:12px; 
+  }
+  footer p{ 
+    color: var(--ink-soft);
+    font-size: 0.85rem; 
+  }
+
+  /* ---- Floating WhatsApp ---- */
+  .float-wa{
+    position: fixed; 
+    bottom: 22px;
+    right: 22px; 
+    z-index: 60;
+    background: var(--moss); 
+    color: var(--paper); 
+    width: 54px; 
+    height:54px; 
+    border-radius:50%;
+    display:flex; 
+    align-items:center;
+    justify-content:center; 
+    box-shadow: 0 6px 18px rgba(42,35,28,0.25);
+    transition: transform .2s ease;
+  }
+  .float-wa:hover{ transform: scale(1.06); }
+  
+  /* ---- Nav Right --- */
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+/* ---------- MENU LINKS ---------- */
+
+.menu-links{
+  width:min(420px, 82vw);
+
+  display:flex;
+  flex-direction:column;
+
+  border-top:1px solid var(--line);
+}
+
+.menu-links a{
+  position:relative;
+
+  display:flex;
+  align-items:center;
+
+  padding:18px 0;
+
+  border-bottom:1px solid var(--line);
+
+  font-family:'Fraunces', serif;
+  font-size:clamp(1.8rem, 3vw, 2.8rem);
+  line-height:1;
+
+  color:var(--ink);
+
+  transition:
+    color .2s ease,
+    padding-left .2s ease;
+}
+
+.menu-links a::after{
+  content:'→';
+
+  position:absolute;
+  right:0;
+
+  font-family:'Karla', sans-serif;
+  font-size:1rem;
+
+  opacity:0;
+
+  transform:translateX(-8px);
+
+  transition:
+    opacity .2s ease,
+    transform .2s ease;
+}
+
+.menu-links a:hover, .menu-links a.active{
+  color:var(--clay);
+}
+.menu-links a:hover{
+  padding-left:6px;
+}
+
+.menu-links a:hover::after{
+  opacity:1;
+  transform:translateX(0);
+}
+
+
+/* ---------- LANGUAGE SUBMENU ---------- */
+
+.menu-language-dropdown{
+  width:min(420px, 82vw);
+  position:relative;
+}
+
+.menu-language-trigger{
+  width:100%;
+
+  border:0;
+  border-bottom:1px solid var(--line);
+
+  background:transparent;
+
+  padding:15px 0;
+
+  display:grid;
+  grid-template-columns:1fr auto auto;
+  align-items:center;
+
+  gap:12px;
+
+  color:var(--ink);
+
+  text-align:left;
+}
+
+.menu-language-label{
+  font-size:.72rem;
+
+  text-transform:uppercase;
+  letter-spacing:.14em;
+
+  color:var(--ink-soft);
+}
+
+.menu-language-current{
+  font-size:.95rem;
+}
+
+.menu-language-arrow{
+  font-size:.9rem;
+
+  transition:transform .25s ease;
+}
+
+.menu-language-dropdown.open .menu-language-arrow{
+  transform:rotate(180deg);
+}
+
+.menu-language-options{
+  display:grid;
+
+  max-height:0;
+  overflow:hidden;
+
+  opacity:0;
+
+  transition:
+    max-height .3s ease,
+    opacity .25s ease,
+    padding .3s ease;
+
+  padding:0;
+}
+
+.menu-language-dropdown.open .menu-language-options{
+  max-height:220px;
+  opacity:1;
+
+  padding:8px 0 0;
+}
+
+.menu-lang-option{
+  width:100%;
+
+  border:0;
+
+  background:transparent;
+
+  color:var(--ink-soft);
+
+  padding:12px 0;
+
+  text-align:left;
+
+  font-size:.95rem;
+
+  border-bottom:1px solid rgba(42,35,28,.08);
+
+  transition:
+    color .2s ease,
+    padding-left .2s ease;
+}
+
+.menu-lang-option:hover{
+  color:var(--clay);
+  padding-left:6px;
+}
+
+.menu-lang-option.active{
+  color:var(--clay);
+}
+
+/* ---- MOBILE ---- */
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+        <a href="#home" class="logo"><img src="data:image/png;base64,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" alt="BODIES Madero &amp; Massage" class="logo-img"> </a>
+ 
+        <nav class="links" id="navLinks">
+
+            <div class="menu-links">
+              <a href="#home" data-i18n="nav_home">Accueil</a>
+              <a href="#services" data-i18n="nav_services">Prestations</a>
+              <a href="#about" data-i18n="nav_about">À propos</a>
+              <a href="#contact" data-i18n="nav_contact">Contact</a>
+            </div>
+
+            <div class="menu-language-dropdown">
+
+              <button
+                class="menu-language-trigger"
+                id="menuLanguageTrigger"
+                type="button"
+              >
+                <span class="menu-language-label">Language</span>
+
+                <span class="menu-language-current" id="menuCurrentLanguage">
+                  English
+                  </span>
+
+                  <span class="menu-language-arrow">⌄</span>
+                </button>
+
+                <div
+                  class="menu-language-options"
+                  id="menuLanguageOptions"
+                >
+                  <button class="menu-lang-option active" data-lang="en">
+                    English
+                  </button>
+
+                  <button class="menu-lang-option" data-lang="fr">
+                    Français
+                  </button>
+
+                  <button class="menu-lang-option" data-lang="id">
+                    Bahasa Indonesia
+                  </button>
+
+                  <button class="menu-lang-option" data-lang="ru">
+                    Русский
+                  </button>
+                </div>
+              </div>
+
+        </nav>
+
+
+  <button class="burger" id="burger" aria-label="Menu">
+    ☰
+  </button>
+
+</div>
+  </div>
+</header>
+
+
+
+  <!-- ===================== HOME ===================== -->
+<section class="page" id="home">
+
+  <div class="home-visual">
+
+    <!-- Si tu utilises une photo -->
+    <img
+      class="home-media"
+      id="homeImage"
+      src="images/home-1.JPG"
+      alt="BODIES wellness studio in Bali"
+    >
+
+    <!-- Si tu préfères une vidéo plus tard, tu pourras remplacer l'image par :
+    <video class="home-media" autoplay muted loop playsinline>
+      <source src="videos/home.mp4" type="video/mp4">
+    </video>
+    -->
+
+    <div class="home-overlay"></div>
+      <div class="home-logo-overlay">
+         <img
+          src="images/Logos.svg"
+          alt="BODIES - Madero & Massage"
+        >
+      </div>
+    <div class="home-actions">
+      <a
+        class="home-btn home-btn-primary"
+        id="heroBook"
+        target="_blank"
+        rel="noopener"
+        data-i18n="cta_book"
+      >
+        Réserver sur Fresha
+      </a>
+
+      <a
+        class="home-btn home-btn-secondary"
+        id="heroWhatsapp"
+        target="_blank"
+        rel="noopener"
+        data-i18n="cta_whatsapp"
+      >
+        Nous écrire sur WhatsApp
+      </a>
+    </div>
+
+  </div>
+
+</section>
+<main class="wrap">
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="page" id="services">
+  <div class="page-head">
+    <h2 data-i18n="services_h2">Prestations</h2>
+  </div>
+
+  <div class="service-list">
+
+    <div class="service-category">
+      <h3 class="category-label" data-i18n="cat_lymphatic">Lymphatique</h3>
+
+      <div class="service">
+        <h3 data-i18n="s_lymphslim_name">Lymph Slimming</h3>
+        <p data-i18n="s_lymphslim_text">Un massage lymphatique dynamique et rythmé qui combine drainage et modelage pour stimuler le système lymphatique, soutenir la circulation et réduire la rétention d'eau et les ballonnements. Redessine les contours du corps tout en l'allégeant.</p>
+        <div class="service-options">
+          <a class="option-link" id="lymphSlim60" target="_blank" rel="noopener">60 min</a>
+          <a class="option-link" id="lymphSlim90" target="_blank" rel="noopener">90 min</a>
+        </div>
+      </div>
+
+      <div class="service">
+        <h3 data-i18n="s_lymphharm_name">Lymph Harmony</h3>
+        <p data-i18n="s_lymphharm_text">Un drainage lymphatique manuel doux et relaxant, réalisé avec de la poudre, aux gestes lents pour stimuler le flux lymphatique et soutenir le drainage naturel. Réduit la rétention d'eau et les ballonnements tout en favorisant une relaxation profonde.</p>
+        <p class="service-note" data-i18n="s_lymphharm_note">(Ce soin peut aussi se faire en séance corps entier de 60 minutes si tu n'as pas de zone particulière à cibler.)</p>
+        <div class="service-options">
+          <a class="option-link" id="lymphHarm60" target="_blank" rel="noopener">60 min</a>
+          <a class="option-link" id="lymphHarm90" target="_blank" rel="noopener">90 min</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-category">
+      <h3 class="category-label" data-i18n="cat_sculpting">Sculpting</h3>
+
+      <div class="service">
+        <h3 data-i18n="s_madero_name">Madero Therapy</h3>
+        <p data-i18n="s_madero_text">Un massage sculptant dynamique qui combine nos techniques de Lymph Slimming avec des outils en bois pour stimuler la circulation, redessiner les contours du corps et améliorer la texture de la peau. Réduit la rétention d'eau et l'aspect de la cellulite.</p>
+        <div class="service-options">
+          <a class="option-link" id="madero60" target="_blank" rel="noopener">60 min <span class="option-note" data-i18n="madero60_note">(jusqu'à 2 zones)</span></a>
+          <a class="option-link" id="madero90" target="_blank" rel="noopener">90 min <span class="option-note" data-i18n="madero90_note">(corps entier)</span></a>
+        </div>
+      </div>
+
+      <div class="service">
+        <h3 data-i18n="s_glutesculpt_name">Glute Sculpt</h3>
+        <p data-i18n="s_glutesculpt_text">Un soin ciblé dédié à raffermir et redessiner les fessiers. La combinaison de madérothérapie et de gestes manuels profonds et rythmés stimule la circulation et améliore le tonus de la peau tout en sculptant les courbes naturelles.</p>
+        <div class="service-options">
+          <a class="option-link" id="gluteSculpt45" target="_blank" rel="noopener">45 min</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="addon-block">
+    <h3 data-i18n="addon_h3">Options en supplément</h3>
+    <p data-i18n="addon_sub">Disponibles avec n'importe quel soin, pour prolonger l'expérience.</p>
+    <ul class="addon-list">
+      <li><span data-i18n="addon_lymphface">Lymph Face</span><span>+20 min</span></li>
+      <li><span data-i18n="addon_maderoface">Madero Face</span><span>+25 min</span></li>
+      <li><span data-i18n="addon_glutesfocus">Glutes Focus</span><span>+20 min</span></li>
+    </ul>
+    <p class="addon-note" data-i18n="addon_note">Tarifs en roupies indonésiennes, taxes et service inclus.</p>
+  </div>
+</section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="page" id="about">
+    <div class="page-head">
+      <h2 data-i18n="about_h2">À propos</h2>
+      <p data-i18n="about_sub">Un salon né du sud de Bali, pensé pour durer.</p>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p data-i18n="about_p1">BODIES est né à Ungasan avec une idée simple : proposer, au même endroit, les trois soins qui font vraiment du bien au corps — madérothérapie, drainage lymphatique et massage traditionnel — sans complexité inutile.</p>
+        <p data-i18n="about_p2">Chaque séance est pensée comme un moment pris pour soi, avec une équipe de praticiens formés et attentifs, dans un cadre calme à l'écart de l'agitation touristique.</p>
+        <p data-i18n="about_p3">Le salon continue de grandir avec la même exigence qu'au premier jour : de la constance dans le soin, plutôt que de la nouveauté pour elle-même.</p>
+      </div>
+      <div>
+        <h3 data-i18n="about_values_h3">Ce qui compte pour nous</h3>
+        <ul class="values">
+          <li><b data-i18n="v1_b">Le geste juste.</b> <span data-i18n="v1_t">Chaque praticien est formé spécifiquement aux techniques proposées.</span></li>
+          <li><b data-i18n="v2_b">Le temps pris au sérieux.</b> <span data-i18n="v2_t">Les créneaux ne sont pas resserrés pour en faire plus.</span></li>
+          <li><b data-i18n="v3_b">La régularité.</b> <span data-i18n="v3_t">Les meilleurs résultats viennent de séances suivies dans la durée, pas d'un soin isolé.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="page" id="contact">
+    <div class="page-head">
+      <h2 data-i18n="contact_h2">Contact</h2>
+      <p data-i18n="contact_sub">À Ungasan, dans le sud de Bali. Le plus simple reste WhatsApp pour une réponse rapide.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-block">
+          <h3 data-i18n="c_address_h3">Adresse</h3>
+          <!-- 🔧 EDIT ME : adresse complète -->
+          <p data-i18n="c_address_p">Jl. Toya Ning II No.99, Ungasan, Kec. Kuta Selatan, Kabupaten Badung, Bali</p>
+          <a class="link" href="https://maps.app.goo.gl/JFseWPbYgan6T5RZA?g_st=ic" target="_blank" rel="noopener" data-i18n="c_map_link">Voir sur Google Maps</a>
+        </div>
+        <div class="contact-block">
+          <h3 data-i18n="c_hours_h3">Horaires</h3>
+          <!-- 🔧 EDIT ME : horaires réels -->
+          <div class="hours-row"><span data-i18n="c_h1">Lundi – Samedi</span><span>11h00 – 19h00</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="contact-block">
+          <h3 data-i18n="c_write_h3">Écrire directement</h3>
+          <p data-i18n="c_write_p">Pour une question, un besoin particulier ou une réservation de dernière minute.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn-solid" id="contactBook" style="text-align:center" target="_blank" rel="noopener" data-i18n="cta_book">Réserver sur Fresha</a>
+          <a class="btn-outline" id="contactWhatsapp" style="text-align:center" target="_blank" rel="noopener" data-i18n="cta_whatsapp">Écrire sur WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© <span id="year"></span> BODIES — Madero &amp; Massage, Ungasan, Bali.</p>
+  </div>
+</footer>
+
+<a class="float-wa" id="floatWhatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.6 6.32A7.85 7.85 0 0 0 12.02 4a7.9 7.9 0 0 0-6.84 11.85L4 20l4.28-1.12a7.9 7.9 0 0 0 3.75.96h.003A7.9 7.9 0 0 0 20 12a7.86 7.86 0 0 0-2.4-5.68Zm-5.58 12.1h-.003a6.56 6.56 0 0 1-3.35-.92l-.24-.14-2.5.66.67-2.44-.16-.25a6.58 6.58 0 1 1 5.58 3.1Zm3.6-4.93c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.2-.5.64-.62.77-.11.13-.23.14-.42.05-.2-.1-.83-.31-1.58-.98-.58-.52-.98-1.16-1.09-1.36-.11-.2-.01-.3.09-.4.09-.1.2-.23.3-.35.1-.11.13-.2.2-.33.06-.13.03-.24-.02-.35-.05-.1-.44-1.06-.6-1.46-.16-.38-.32-.33-.44-.34h-.38c-.13 0-.34.05-.52.24-.18.2-.68.66-.68 1.6s.7 1.86.8 1.99c.1.13 1.37 2.1 3.33 2.94.46.2.83.32 1.11.41.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.16-.46.16-.86.11-.94-.05-.08-.18-.13-.38-.23Z" fill="currentColor"/>
+  </svg>
+</a>
+
+<script>
+/* ================= 🔧 EDIT ME — infos à personnaliser ================= */
+const WHATSAPP_NUMBER = "628135973253"; // format international, sans + ni espaces
+const FRESHA_URL = "https://www.fresha.com/a/bodies-bali-jl-toya-ning-ii-kabupaten-de-badung-jalan-toya-ning-ii-ishqbvao"; // lien direct vers la page de réservation BODIES
+const FRESHA_MADERO_60 = "https://www.fresha.com/book-now/bodies-ungasan-rjdrc40l/services?lid=2846452&oiid=sv%3A26047382&share=true&pId=2752311";
+const FRESHA_MADERO_90 = "https://www.fresha.com/book-now/bodies-ungasan-rjdrc40l/services?lid=2846452&oiid=sv%3A26676214&share=true&pId=2752311";
+const FRESHA_LYMPH_SLIM_60  = "https://www.fresha.com/book-now/bodies-ungasan-rjdrc40l/services?lid=2846452&oiid=sv%3A25987881&share=true&pId=2752311";
+const FRESHA_LYMPH_SLIM_90  = "https://www.fresha.com/book-now/bodies-ungasan-rjdrc40l/services?lid=2846452&oiid=sv%3A25987881&share=true&pId=2752311";
+const FRESHA_LYMPH_HARM_60  = "https://www.fresha.com/book-now/bodies-ungasan-rjdrc40l/services?lid=2846452&oiid=sv%3A26047363&share=true&pId=2752311";
+const FRESHA_LYMPH_HARM_90  = "https://www.fresha.com/book-now/bodies-ungasan-rjdrc40l/services?lid=2846452&oiid=sv%3A26047363&share=true&pId=2752311";
+const FRESHA_GLUTE_SCULPT_45 = "https://www.fresha.com/book-now/bodies-ungasan-rjdrc40l/services?lid=2846452&oiid=sv%3A26676237&share=true&pId=2752311";
+
+
+/* ====================================================================== */
+
+const waLink = `https://wa.me/${WHATSAPP_NUMBER}`;
+["heroWhatsapp","contactWhatsapp","floatWhatsapp"].forEach(id=>{
+  const el = document.getElementById(id);
+  if(el) el.href = waLink;
+});
+["navBook","heroBook","contactBook"].forEach(id=>{
+  const el = document.getElementById(id);
+  if(el) el.href = FRESHA_URL;
+});
+document.getElementById("lymphSlim60").href   = FRESHA_LYMPH_SLIM_60;
+document.getElementById("lymphSlim90").href   = FRESHA_LYMPH_SLIM_90;
+document.getElementById("lymphHarm60").href   = FRESHA_LYMPH_HARM_60;
+document.getElementById("lymphHarm90").href   = FRESHA_LYMPH_HARM_90;
+document.getElementById("madero60").href      = FRESHA_MADERO_60;
+document.getElementById("madero90").href      = FRESHA_MADERO_90;
+document.getElementById("gluteSculpt45").href = FRESHA_GLUTE_SCULPT_45;
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* ---------- Routing ---------- */
+const pages = document.querySelectorAll("section.page");
+const navLinks = document.querySelectorAll("nav.links a");
+
+function showPage(hash){
+
+  const id =
+    (hash || "#home").replace("#","");
+
+  pages.forEach(p => {
+    p.classList.toggle(
+      "active",
+      p.id === id
+    );
+  });
+
+  navLinks.forEach(a => {
+    a.classList.toggle(
+      "active",
+      a.getAttribute("href") === `#${id}`
+    );
+  });
+
+  const nav =
+    document.getElementById("navLinks");
+
+  if(nav){
+    nav.classList.remove("open");
+  }
+
+  const burger =
+    document.getElementById("burger");
+
+  if(burger){
+    burger.textContent = "☰";
+  }
+
+}
+window.addEventListener("hashchange", () => showPage(location.hash));
+showPage(location.hash);
+
+const burger = document.getElementById("burger");
+const navMenu = document.getElementById("navLinks");
+
+burger.addEventListener("click", () => {
+
+  navMenu.classList.toggle("open");
+
+  const isOpen =
+    navMenu.classList.contains("open");
+
+  burger.textContent =
+    isOpen ? "×" : "☰";
+
+});
+const menuLanguageTrigger =
+  document.getElementById("menuLanguageTrigger");
+
+const menuLanguageDropdown =
+  document.querySelector(".menu-language-dropdown");
+
+const menuCurrentLanguage =
+  document.getElementById("menuCurrentLanguage");
+
+if(menuLanguageTrigger && menuLanguageDropdown){
+
+  menuLanguageTrigger.addEventListener("click", () => {
+
+    menuLanguageDropdown.classList.toggle("open");
+
+  });
+  const menuLanguageOptions =
+  document.querySelectorAll(".menu-lang-option");
+
+menuLanguageOptions.forEach(option => {
+
+  option.addEventListener("click", () => {
+
+    const selectedLang =
+      option.dataset.lang;
+
+    if(!dict[selectedLang]){
+      alert("This language will be available soon.");
+      return;
+    }
+
+    lang = selectedLang;
+
+    applyLang();
+
+    menuLanguageOptions.forEach(item => {
+      item.classList.remove("active");
+    });
+
+    option.classList.add("active");
+
+    if(menuCurrentLanguage){
+      menuCurrentLanguage.textContent =
+        option.textContent.trim();
+    }
+
+    menuLanguageDropdown?.classList.remove("open");
+
+  });
+
+});
+
+}
+/* ---------- i18n ---------- */
+const dict = {
+  fr: {
+    nav_home:"Accueil", nav_services:"Prestations", nav_about:"À propos", nav_contact:"Contact", nav_book:"Réserver",
+    cta_book:"Réserver sur Fresha", cta_whatsapp:"Écrire sur WhatsApp",
+    pillar1_tag:"Madéro Thérapie", pillar1_title:"Sculpter, en douceur", pillar1_text:"Des outils en bois travaillent les tissus en profondeur pour affiner la silhouette et relancer la circulation.",
+    pillar2_tag:"Lymph Slimming", pillar2_title:"Alléger le corps", pillar2_text:"Un geste précis et enveloppant qui aide le corps à évacuer ce qui l'encombre et à retrouver son équilibre.",
+    pillar3_tag:"Lymph Harmony", pillar3_title:"Relâcher les tensions", pillar3_text:"Balinais ou deep tissue, un massage pensé pour dénouer le corps et calmer l'esprit.",
+    services_h2:"Prestations", 
+    cat_lymphatic:"Lymphatique", cat_sculpting:"Sculpting",
+    s_lymphslim_name:"Lymph Slimming", s_lymphslim_text:"Un massage lymphatique dynamique et rythmé qui combine drainage et modelage pour stimuler le système lymphatique, soutenir la circulation et réduire la rétention d'eau et les ballonnements. Redessine les contours du corps tout en l'allégeant.",
+    s_lymphharm_name:"Lymph Harmony", s_lymphharm_text:"Un drainage lymphatique manuel doux et relaxant, réalisé avec de la poudre, aux gestes lents pour stimuler le flux lymphatique et soutenir le drainage naturel. Réduit la rétention d'eau et les ballonnements tout en favorisant une relaxation profonde.",
+    s_lymphharm_note:"(Ce soin peut aussi se faire en séance corps entier de 60 minutes si tu n'as pas de zone particulière à cibler.)",
+    s_madero_name:"Madero Therapy", s_madero_text:"Un massage sculptant dynamique qui combine nos techniques de Lymph Slimming avec des outils en bois pour stimuler la circulation, redessiner les contours du corps et améliorer la texture de la peau. Réduit la rétention d'eau et l'aspect de la cellulite.",
+    madero60_note:"(jusqu'à 2 zones)", madero90_note:"(corps entier)",
+    s_glutesculpt_name:"Glute Sculpt", s_glutesculpt_text:"Un soin ciblé dédié à raffermir et redessiner les fessiers. La combinaison de madérothérapie et de gestes manuels profonds et rythmés stimule la circulation et améliore le tonus de la peau tout en sculptant les courbes naturelles.",
+    addon_h3:"Options en supplément", addon_sub:"Disponibles avec n'importe quel soin, pour prolonger l'expérience.",
+    addon_lymphface:"Lymph Face", addon_maderoface:"Madero Face", addon_glutesfocus:"Glutes Focus",
+    addon_note:"Tarifs en roupies indonésiennes, taxes et service inclus.",
+    about_h2:"À propos", about_sub:"Un salon né du sud de Bali, pensé pour durer.",
+    about_p1:"BODIES est né à Ungasan avec une idée simple : proposer, au même endroit, les trois soins qui font vraiment du bien au corps — madérothérapie, drainage lymphatique et massage traditionnel — sans complexité inutile.",
+    about_p2:"Chaque séance est pensée comme un moment pris pour soi, avec une équipe de praticiens formés et attentifs, dans un cadre calme à l'écart de l'agitation touristique.",
+    about_p3:"Le salon continue de grandir avec la même exigence qu'au premier jour : de la constance dans le soin, plutôt que de la nouveauté pour elle-même.",
+    about_values_h3:"Ce qui compte pour nous",
+    v1_b:"Le geste juste.", v1_t:"Chaque praticien est formé spécifiquement aux techniques proposées.",
+    v2_b:"Le temps pris au sérieux.", v2_t:"Les créneaux ne sont pas resserrés pour en faire plus.",
+    v3_b:"La régularité.", v3_t:"Les meilleurs résultats viennent de séances suivies dans la durée, pas d'un soin isolé.",
+    contact_h2:"Contact", contact_sub:"À Ungasan, dans le sud de Bali. Le plus simple reste WhatsApp pour une réponse rapide.",
+    c_address_h3:"Adresse", c_address_p:"Ungasan, Kuta Selatan, Bali — adresse complète communiquée à la réservation.", c_map_link:"Voir sur Google Maps",
+    c_hours_h3:"Horaires", c_h1:"Lundi – Samedi", c_h2:"Dimanche", c_h2v:"Sur rendez-vous",
+    c_write_h3:"Écrire directement", c_write_p:"Pour une question, un besoin particulier ou une réservation de dernière minute.",
+  },
+  en: {
+    nav_home:"Home", nav_services:"Services", nav_about:"About", nav_contact:"Contact", nav_book:"Book now", cta_book:"Book on Fresha", cta_whatsapp:"Book via WhatsApp",
+    pillar1_tag:"Madero therapy", pillar1_title:"Sculpting, gently", pillar1_text:"Wooden tools work deep into the tissue to refine the silhouette and boost circulation.",
+    pillar2_tag:"Lymph Slimming", pillar2_title:"Lighten the body", pillar2_text:"Gentle, rhythmic pressure that supports lymphatic flow and eases heavy legs and post-flight discomfort.",
+    pillar3_tag:"Lymph Harmony", pillar3_title:"Release tension", pillar3_text:"Balinese or deep tissue depending on what you need: deep relaxation or targeted work on muscle tension.",
+    services_h2:"Services",
+    cat_lymphatic:"Lymphatic", cat_sculpting:"Sculpting",
+    s_lymphslim_name:"Lymph Slimming", s_lymphslim_text:"A dynamic and rhythmic lymphatic massage combining drainage and modeling techniques to stimulate the lymphatic system, support circulation, and help reduce water retention and bloating. Helps redefine the body's contours while leaving you feeling lighter.",
+    s_lymphharm_name:"Lymph Harmony", s_lymphharm_text:"A gentle and relaxing Manual Lymphatic Drainage performed with powder, using soft and slow techniques to stimulate lymph flow and support natural drainage. Helps reduce water retention and bloating while promoting deep relaxation.",
+    s_lymphharm_note:"(This treatment can be performed as a 60-minute full-body session if you have no specific concerns.)",
+    s_madero_name:"Madero Therapy", s_madero_text:"A dynamic sculpting massage combining our Lymph Slimming techniques with wooden tools to stimulate circulation, reshape body contours and improve skin texture. Helps reduce water retention and the appearance of cellulite.",
+    madero60_note:"(up to 2 zones)", madero90_note:"(full body)",
+    s_glutesculpt_name:"Glute Sculpt", s_glutesculpt_text:"A focused sculpting treatment dedicated to lifting and reshaping the glutes. A combination of madero and deep manual, rhythmic techniques stimulate circulation and improve skin tone while enhancing natural curves.",
+    addon_h3:"Add-ons", addon_sub:"Available with any treatment, to elevate your experience.",
+    addon_lymphface:"Lymph Face", addon_maderoface:"Madero Face", addon_glutesfocus:"Glutes Focus",
+    addon_note:"All prices are in Indonesian Rupiah and include tax and service.",
+    about_h2:"About", about_sub:"A studio born in South Bali, built to last.",
+    about_p1:"BODIES started in Ungasan with a simple idea: bring together, in one place, the three treatments that truly help the body — madero therapy, lymphatic drainage and traditional massage — without unnecessary complexity.",
+    about_p2:"Every session is treated as real time for yourself, with a team of trained, attentive practitioners, in a calm setting away from the tourist rush.",
+    about_p3:"The studio keeps growing with the same standard as day one: consistency in care, rather than novelty for its own sake.",
+    about_values_h3:"What matters to us",
+    v1_b:"The right technique.", v1_t:"Every practitioner is trained specifically in the treatments we offer.",
+    v2_b:"Time taken seriously.", v2_t:"Slots aren't shortened to fit more people in.",
+    v3_b:"Consistency.", v3_t:"The best results come from regular sessions over time, not a single treatment.",
+    contact_h2:"Contact", contact_sub:"In Ungasan, South Bali. WhatsApp is the fastest way to reach us.",
+    c_address_h3:"Address", c_address_p:"Ungasan, South Kuta, Bali — full address shared upon booking.", c_map_link:"View on Google Maps",
+    c_hours_h3:"Opening hours", c_h1:"Monday – Saturday", c_h2:"Sunday", c_h2v:"By appointment",
+    c_write_h3:"Write to us directly", c_write_p:"For questions, special requests or last-minute bookings.",
+  }
+};
+
+let lang = "en";
+
+function applyLang(){
+  const d = dict[lang];
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key = el.getAttribute("data-i18n");
+    if(d[key] !== undefined) el.innerHTML = d[key];
+  });
+  document.documentElement.lang = lang;
+}
+
+applyLang();
+</script>
+
+<script>
+  const homeImages = [
+    "images/home-1.jpg",
+    "images/home-2.jpg",
+    "images/home-3.jpg",
+    "images/home-4.jpg"
+  ];
+
+  const lastImage = localStorage.getItem("lastHomeImage");
+
+  let availableImages = homeImages.filter(image => image !== lastImage);
+
+  if (availableImages.length === 0) {
+    availableImages = homeImages;
+  }
+
+  const randomHomeImage =
+    availableImages[Math.floor(Math.random() * availableImages.length)];
+
+  document.getElementById("homeImage").src = randomHomeImage;
+
+  localStorage.setItem("lastHomeImage", randomHomeImage);
+</script>
+
+</body>
+</html>
