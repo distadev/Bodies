@@ -91,16 +91,18 @@
     display:block; 
     position:relative;
     z-index: 220;
-  }
+    cursor:pointer;
+}
 
   .logo span{ font-style: normal; color: var(--clay); }
 
   .logo-img { 
     height: 45px!important; 
     width: auto!important; 
-    display:block; 
-   }
-   
+    display:block;
+    cursor:pointer;
+}
+
   @media (max-width:980px){
 
   header{
@@ -353,31 +355,22 @@
 .home-hover-title{
   position:absolute;
   inset:0;
-
   z-index:2;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   padding:24px;
-
   text-align:center;
-
   font-family:'serif';
   font-size:clamp(1.8rem, 4vw, 3.5rem);
-
   color:var(--paper);
   opacity:0;
   transform:translateY(8px);
-
   transition:
     opacity .35s ease,
     transform .35s ease;
-
   pointer-events:none;
 }
-
 
 .home-overlay{
   transition:background .35s ease;
@@ -704,7 +697,8 @@
   gap: 10px 30px;
 }
 .addon-list li{ 
-  font-size: 0.95rem;
+  font-size: 1.2rem;
+  font-weight: bold;
   color: var(--ink); 
 }
 .addon-list li span:last-child{ 
@@ -796,7 +790,51 @@
     gap: 14px;
     margin-top: 26px;
   }
+.btn-solid,
+.btn-outline{
+  min-height:50px;
+  padding:0 26px;
 
+  border-radius:999px;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:.95rem;
+  font-weight:500;
+
+  cursor:pointer;
+
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    border-color .2s ease;
+}
+
+.btn-solid{
+  background:var(--clay);
+  color:var(--paper);
+  border:1px solid var(--clay);
+}
+
+.btn-solid:hover{
+  background:var(--clay-dark);
+  border-color:var(--clay-dark);
+  transform:translateY(-2px);
+}
+
+.btn-outline{
+  background:transparent;
+  color:var(--ink);
+  border:1px solid var(--wood);
+}
+
+.btn-outline:hover{
+  border-color:var(--clay);
+  color:var(--clay);
+  transform:translateY(-2px);
+}
   @media (max-width: 760px){ .contact-grid{
     grid-template-columns: 1fr;
     gap: 10px; } }
@@ -836,6 +874,39 @@
     transition: transform .2s ease;
   }
   .float-wa:hover{ transform: scale(1.06); }
+  
+.float-instagram{
+  position:fixed;
+  right:22px;
+  bottom:88px;
+
+  z-index:60;
+
+  width:54px;
+  height:54px;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:var(--clay);
+  color:var(--paper);
+
+  box-shadow:0 6px 18px rgba(42,35,28,.20);
+
+  cursor:pointer;
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.float-instagram:hover{
+  transform:scale(1.06);
+  background:var(--clay-dark);
+}
   
   /* ---- Nav Right --- */
 
@@ -1265,6 +1336,19 @@
   </div>
 </footer>
 
+<a
+  class="float-instagram"
+  href="https://www.instagram.com/TON_COMPTE/"
+  target="_blank"
+  rel="noopener"
+  aria-label="Instagram"
+>
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
+    <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+    <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+  </svg>
+</a>
 <a class="float-wa" id="floatWhatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.6 6.32A7.85 7.85 0 0 0 12.02 4a7.9 7.9 0 0 0-6.84 11.85L4 20l4.28-1.12a7.9 7.9 0 0 0 3.75.96h.003A7.9 7.9 0 0 0 20 12a7.86 7.86 0 0 0-2.4-5.68Zm-5.58 12.1h-.003a6.56 6.56 0 0 1-3.35-.92l-.24-.14-2.5.66.67-2.44-.16-.25a6.58 6.58 0 1 1 5.58 3.1Zm3.6-4.93c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.2-.5.64-.62.77-.11.13-.23.14-.42.05-.2-.1-.83-.31-1.58-.98-.58-.52-.98-1.16-1.09-1.36-.11-.2-.01-.3.09-.4.09-.1.2-.23.3-.35.1-.11.13-.2.2-.33.06-.13.03-.24-.02-.35-.05-.1-.44-1.06-.6-1.46-.16-.38-.32-.33-.44-.34h-.38c-.13 0-.34.05-.52.24-.18.2-.68.66-.68 1.6s.7 1.86.8 1.99c.1.13 1.37 2.1 3.33 2.94.46.2.83.32 1.11.41.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.16-.46.16-.86.11-.94-.05-.08-.18-.13-.38-.23Z" fill="currentColor"/>
