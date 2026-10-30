@@ -891,9 +891,16 @@
   align-items:center;
   justify-content:center;
 
-  background:var(--clay);
-  color:var(--paper);
 
+  color:var(--paper);
+  background:
+    radial-gradient(circle at 30% 110%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285AEB 90%
+  );
   box-shadow:0 6px 18px rgba(42,35,28,.20);
 
   cursor:pointer;
@@ -905,7 +912,13 @@
 
 .float-instagram:hover{
   transform:scale(1.06);
-  background:var(--clay-dark);
+  background:radial-gradient(circle at 30% 110%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285AEB 90%
+  );;
 }
   
   /* ---- Nav Right --- */
@@ -1338,7 +1351,7 @@
 
 <a
   class="float-instagram"
-  href="https://www.instagram.com/TON_COMPTE/"
+  href="https://www.instagram.com/bodiesbali/"
   target="_blank"
   rel="noopener"
   aria-label="Instagram"
